@@ -1,0 +1,43 @@
+public class Main
+{
+	public static void main(String[] args) {
+		//nasz obiekt
+		MyNumber nr = new MyNumber(4);
+	    MyNumber nr1 = new MyNumber(3);
+		System.out.println("Liczba nieparzysta"+nr.isOdd());
+		System.out.println("Liczba parzysta"+nr.isEven());
+		System.out.println("Pierwiastek: "+nr.sqrt());
+		System.out.println("Potega: "+nr.pow(nr1));
+		System.out.println("Suma: "+nr.add(nr1));
+		System.out.println("Roznica: "+nr.subtract(nr1));
+		
+	}
+}
+class MyNumber{
+    double a;
+    
+    public MyNumber(double a){
+        this.a = a;
+    }
+    public boolean isEven(){
+        return a%2 == 0;
+    }
+    
+    public boolean isOdd(){
+        return ! isEven();
+    }
+    public double sqrt(){
+        return Math.sqrt(a);
+    }
+    public MyNumber pow(MyNumber pow){
+        return new MyNumber(Math.pow(a,pow.a));
+    }
+    
+    public MyNumber add(MyNumber wartosc){
+        return new MyNumber(a+wartosc.a);
+    }
+     public MyNumber subtract(MyNumber wartosc){
+        return new MyNumber(a-wartosc.a);
+    }
+    
+}
