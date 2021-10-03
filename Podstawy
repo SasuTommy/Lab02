@@ -1,0 +1,31 @@
+public class Main
+{
+	public static void main(String[] args) {
+	    //Obiekt Klasy
+	    Telefon MyTel = new Telefon("Xiaomi Mi 10T Pro", "Srebrny","887679739");
+	    MyTel.SendSMS(887679739, "Text");
+	    
+	}
+}
+class Telefon{
+    //CialoKlasy
+    //pola
+    String model, colour;
+    int number;
+    
+    //METODY
+    //konstruktor
+    public Telefon(String model, colour, int number){
+        this.model=model;
+        this.colour= kolor;
+        this.number=numer;
+    }
+    
+    public void SendSMS(int nr, String text){
+        System.out.println("Wysylam SMS na nr: "+nr);
+        System.out.println("\n O tresci: "+text);
+}
+    public String ReciveSMS(){
+        return "SMS Witaj";
+    }
+}
