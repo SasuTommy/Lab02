@@ -1,0 +1,31 @@
+public class Main
+{
+	public static void main(String[] args) {
+		//Obiekt klasy
+		Prostokat ob1 = new Prostokat(4.5,6.5);
+	    if(ob1.a>0 && ob1.b>0){
+	      	System.out.println(ob1.getPole());
+	      	System.out.println(ob1.getObwod());
+	        System.out.println(ob1.getPrzekatna());
+	    }else{
+		System.out.println("Bok nie może mieć wartości rownej zero badz mniejszej");
+	}
+}
+}
+class Prostokat{
+    double a;
+    double b;
+    public Prostokat (double a, double b){
+        this.a = a;
+        this.b = b;
+    }
+    public double getPole(){
+        return a*b;
+    }
+    public double getObwod(){
+        return 2*a+2*b;
+    }
+    public double getPrzekatna(){
+        return Math.sqrt(a*a+b*b);
+    }
+}
