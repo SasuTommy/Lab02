@@ -1,0 +1,47 @@
+public class Main
+{
+	public static void main(String[] args) {
+        //Obiekt Klasy
+        Human me = new Human (21,74.5,185,"Sasu ", true);
+        System.out.println(me.getName());
+        System.out.println("Ma lat: "+me.getAge());
+        System.out.println("Waży: "+me.getWeight()+"Kg");
+        System.out.println("Mierzy: "+me.getHeight()+"cm wzrostu");
+        System.out.println("Wartość true oznacza faceta a false kobiete w tym przypadku "+me.getName()+" jest: "+me.getIsMale());
+        
+	}
+}
+class Human{
+    int age;
+    double weight;
+    double height;
+    String name;
+    boolean isMale;
+    
+    //metody Klasy dzieki ktorym mozna wypisac w prosty sposob cechy naszej klasy (to wyzej)
+    
+    public Human (int age, double weight, double height, String name, boolean isMale){//To jest konstruktor czyli przy tworzxeniu obiektu defautowe wartosci
+        this.age =  age;
+        this.weight = weight;
+        this.height =    height;
+        this.name = name;
+        this.isMale = isMale;
+    }
+    //A tu zaczynaja sie nasze metody
+    public int getAge(){
+        return age;
+    }
+    public double getWeight(){
+        return weight;    
+    }
+    public double getHeight(){
+        return height;
+    }
+    public String getName(){
+        return name;
+    }
+    public boolean getIsMale(){
+        return isMale;    
+    }
+    
+}
